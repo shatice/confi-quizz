@@ -2,3 +2,8 @@
 @import './vendors/reset.scss';
 @import './vendors/vars.scss';
 @import './vendors/mixins.scss';
+
+/***** BLOCKS *****/
+@import './blocks/global.scss';
+@import './blocks/questionContainer.scss';
+@import './blocks/answersList.scss';

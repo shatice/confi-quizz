@@ -1,0 +1,17 @@
+/***** FLEXBOX  *****/
+
+@mixin flexbox($direction, $justify, $align, $wrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+/***** MEDIA QUERIES *****/
+
+@mixin medium {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
