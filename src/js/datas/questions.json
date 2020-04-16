@@ -11,15 +11,15 @@
         },
         {
           "answer": "rep2", 
-          "type": true 
+          "type": false 
         },
         {
           "answer": "rep3", 
-          "type": true 
+          "type": false 
         },
         {
           "answer": "rep4", 
-          "type": true 
+          "type": false 
         }
       ]
     },
@@ -33,15 +33,15 @@
         },
         {
           "answer": "kk2", 
-          "type": true 
+          "type": false
         },
         {
           "answer": "kk3", 
-          "type": true 
+          "type": false
         },
         {
           "answer": "kk4", 
-          "type": true 
+          "type": false
         }
       ]
     },
@@ -51,19 +51,19 @@
       "answers": [
         {
           "answer": "pipi1", 
-          "type": true 
+          "type": true
         },
         {
           "answer": "pipi2", 
-          "type": true 
+          "type": false 
         },
         {
           "answer": "pipi3", 
-          "type": true 
+          "type": false 
         },
         {
           "answer": "pipi4", 
-          "type": true 
+          "type": false 
         }
       ]
     }

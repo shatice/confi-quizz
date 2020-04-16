@@ -12,19 +12,29 @@ function shuffle(array) {
 /**
  * Gets questions content
  */
-const questionItem = document.querySelector('#question');
-const answersItems = document.querySelectorAll('#answersList li');
 
-/**
- * Gets questions content
- */
+const questionTitle = document.querySelector('#questionContainer h1');
+const answersList = document.querySelectorAll('#answersList li');
 
 function getNewQuestion(a) {
   for (let i=0; i < json.questions[a].answers.length; i++) {
-    questionItem.innerHTML = json.questions[a].question;  
-    answersItems[i].innerHTML = json.questions[a].answers[i].answer;
+    questionTitle.innerHTML = json.questions[a].question;  
+    answersList[i].innerHTML = json.questions[a].answers[i].answer;
+    answersList[i].dataset.value = json.questions[a].answers[i].type; 
   }
 }
+
+/**
+ * Set answer validation
+ */
+
+ function getAnswerValidation(target) {
+   if(target.dataset.value === true) {
+     console.log('Bonne réponse !')
+   } else {
+     console.log('Mauvaise réponse :(')
+   }
+ }
 
 /**
  * Shuffles answers order
@@ -44,14 +54,18 @@ getNewQuestion(0);
 
 let count = 0; 
 
-for (let j = 0; j < answersItems.length; j++) {
-  answersItems[j].addEventListener('click', function() {
+for (let index = 0; index < answersList.length; index++) {
+  answersList[index].addEventListener('click', function() {
     count++;
-    if (count > json.questions.length -1) {
-      return;    
-    } else {
+
+    if (count <= json.questions.length -1) {
       shuffle(json.questions[count].answers)
       getNewQuestion(count);
+      getAnswerValidation(event.target)
+    } 
+    
+    else {
+      return;    
     }
   });
 }
