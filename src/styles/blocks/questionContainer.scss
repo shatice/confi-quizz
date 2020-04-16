@@ -1,0 +1,13 @@
+.questionContainer {
+  width: 100%;
+  min-height: 6rem;
+  margin-bottom: 4rem;
+  @include flexbox(row, center, center, unset); 
+  background-color: $black;
+  color: $white;
+  border-radius: $borderRadius;
+
+  @include medium {
+    max-width: 15rem;
+  }
+}

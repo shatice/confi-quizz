@@ -1,3 +1,10 @@
 body {
-  
+  animation: fade 2s ease-out;
+  transition: all .5s ease-out;
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+  @include flexbox(column, flex-start, center, unset);
+  font-family: $primaryFont;
+  color: $black;
 }

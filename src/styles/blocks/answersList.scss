@@ -1,0 +1,38 @@
+.answersList {
+  width: 100%;
+
+  @include medium {
+    @include flexbox(row, center, center, wrap); 
+    width: 50%;
+  }
+
+  li {
+    cursor: pointer;
+    transition: all .5s;
+    width: 100%;
+    height: 3rem;
+    @include flexbox(row, center, center, unset); 
+    background-color: $black;
+    color: $white;
+    border-radius: $borderRadius;
+
+    &:not(:first-child) {
+      margin-top: 1rem;
+    }
+
+    &:hover {
+      letter-spacing: .1rem;
+      background-color: $blackDarker;
+    }
+
+    @include medium {
+      width: 15rem;
+      height: 6rem;
+      margin: 0 1rem 1rem;
+
+      &:not(:first-child) {
+        margin-top: 0;
+      }
+    }
+  }
+}
